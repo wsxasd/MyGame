@@ -10,16 +10,16 @@ namespace MyGame
     {
         static void Main(string[] args)
         {
-            ConsoloReader consoloReader = new ConsoloReader();
+            ConsoloReader consoleReader = new ConsoloReader();
             
-            int victimHealh = consoloReader.GetHealth();
+            int victimHealh = consoleReader.GetHealth();
 
-            Victim victim = consoloReader.GetVictim(victimHealh);
+            Victim victim = consoleReader.GetVictim(victimHealh);
             victim.StepsToRun = 10;
-            Killer killer = consoloReader.GetKiller();
+            Killer killer = consoleReader.GetKiller();
 
-            Weapon weapon = consoloReader.ChooseWeapon(killer);
-            Shield shield = consoloReader.ChooseShield(victim);
+            Weapon weapon = consoleReader.ChooseWeapon(killer);
+            Shield shield = consoleReader.ChooseShield(victim);
 
             for (int i = 0; i < victim.StepsToRun; i++)
             {
