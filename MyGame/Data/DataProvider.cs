@@ -1,5 +1,6 @@
 ﻿using System;
 using MyGame.CharacterModels;
+using MyGame.ShieldModels;
 using MyGame.WeaponModels;
 
 namespace MyGame.Data
@@ -11,41 +12,54 @@ namespace MyGame.Data
             Console.WriteLine("Choose weapon");
             Console.WriteLine("1 - gun\n2 - blade");
             string weapon = Console.ReadLine();
-            if (weapon == "1")
+            switch(weapon)
             {
-                return new Gun();
-            }
-            else if (weapon == "2")
-            {
-                return new Blade();
-            } else
-            {
-                return new Weapon(); 
+                case ("1"):
+                    return new Gun();
+                case ("2"):
+                    return new Blade();
+                default:
+                    return new Weapon();
             }
         }
 
-        public int GetHealth()
+        public double GetHealth()
         {
             Console.WriteLine("Enter health for victim: ");
             string health = Console.ReadLine();
 
-            return Convert.ToInt32(health);
+            return Convert.ToDouble(health);
         }
 
         public Killer GetKiller()
         {
             Console.WriteLine("Killer's name: ");
-            var characterName = Console.ReadLine();
+            string characterName = Console.ReadLine();
 
             return new Killer(characterName);
         }
 
-        public Victim GetVictim(int health)
+        public Victim GetVictim(double health)
         {
             Console.WriteLine("Victim's name: ");
-            var characterName = Console.ReadLine();
+            string characterName = Console.ReadLine();
 
             return new Victim(characterName, health);
+        }
+        public Shield ChooseShield(Victim victim)
+        {
+            Console.WriteLine("Choose shield");
+            Console.WriteLine("1 - chain mail\n2 - body armor");
+            string shield = Console.ReadLine();
+            switch (shield)
+            {
+                case ("1"):
+                    return new ChainMail();
+                case ("2"):
+                    return new BodyArmor();
+                default:
+                    return new Shield();
+            }
         }
     }
 }

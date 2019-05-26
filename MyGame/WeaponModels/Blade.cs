@@ -8,10 +8,10 @@ namespace MyGame.WeaponModels
     {
         public Blade()
         {
-            Damage = 2;
+            Damage = 3;
         }
 
-        public override int DealDamage(int victimHealth)
+        public override double DealDamage(double victimHealth)
         {
             return victimHealth -= Damage;
         }

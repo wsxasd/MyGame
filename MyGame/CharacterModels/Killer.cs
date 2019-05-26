@@ -11,13 +11,11 @@ namespace MyGame.CharacterModels
         {
 
         }
-
         public override void Voice()
         {
             Console.WriteLine("I'll kill you");
         }
-
-        public int Attack(Weapon weapon, int victimHealth)
+        public double Attack(Weapon weapon, double victimHealth)
         {
             return weapon.DealDamage(victimHealth);
         }

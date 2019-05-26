@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using MyGame.CharacterModels;
+using MyGame.ShieldModels;
 using MyGame.WeaponModels;
 
 namespace MyGame.Data
@@ -10,10 +11,12 @@ namespace MyGame.Data
     {
         Killer GetKiller();
 
-        Victim GetVictim(int health);
+        Victim GetVictim(double health);
 
         Weapon ChooseWeapon(Killer killer);
 
-        int GetHealth();
+        double GetHealth();
+
+        Shield ChooseShield(Victim victim);
     }
 }
