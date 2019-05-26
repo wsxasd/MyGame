@@ -10,16 +10,16 @@ namespace MyGame
     {
         static void Main(string[] args)
         {
-            DataProvider dataProvider = new DataProvider();
+            ConsoloReader consoloReader = new ConsoloReader();
             
-            double victimHealh = dataProvider.GetHealth();
+            int victimHealh = consoloReader.GetHealth();
 
-            Victim victim = dataProvider.GetVictim(victimHealh);
+            Victim victim = consoloReader.GetVictim(victimHealh);
             victim.StepsToRun = 10;
-            Killer killer = dataProvider.GetKiller();
+            Killer killer = consoloReader.GetKiller();
 
-            Weapon weapon = dataProvider.ChooseWeapon(killer);
-            Shield shield = dataProvider.ChooseShield(victim);
+            Weapon weapon = consoloReader.ChooseWeapon(killer);
+            Shield shield = consoloReader.ChooseShield(victim);
 
             for (int i = 0; i < victim.StepsToRun; i++)
             {
@@ -33,12 +33,8 @@ namespace MyGame
                     Console.WriteLine("Victim died");
                     break;
                 }   
-                else if (victim.Health > 0 && i >= victim.StepsToRun)
-                {
-                    Console.WriteLine("Victim escaped");
-                    break;
-                }
             }
+
         }
     }
 }

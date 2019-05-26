@@ -15,7 +15,7 @@ namespace MyGame.CharacterModels
         {
             Console.WriteLine("I'll kill you");
         }
-        public double Attack(Weapon weapon, double victimHealth)
+        public int Attack(Weapon weapon, int victimHealth)
         {
             return weapon.DealDamage(victimHealth);
         }

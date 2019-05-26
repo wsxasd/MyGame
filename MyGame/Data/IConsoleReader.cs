@@ -7,15 +7,15 @@ using MyGame.WeaponModels;
 
 namespace MyGame.Data
 {
-    interface IDataProvider
+    interface IConsoleReader
     {
         Killer GetKiller();
 
-        Victim GetVictim(double health);
+        Victim GetVictim(int health);
 
         Weapon ChooseWeapon(Killer killer);
 
-        double GetHealth();
+        int GetHealth();
 
         Shield ChooseShield(Victim victim);
     }

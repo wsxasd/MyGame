@@ -6,8 +6,8 @@ namespace MyGame.WeaponModels
 {
     class Weapon
     {
-        public double Damage { get; set; } = 1;
-        public virtual double DealDamage(double victimHealth)
+        public int Damage { get; set; } = 1;
+        public virtual int DealDamage(int victimHealth)
         {
             return victimHealth -= Damage;
         }

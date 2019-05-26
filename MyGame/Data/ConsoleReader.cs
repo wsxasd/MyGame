@@ -5,7 +5,7 @@ using MyGame.WeaponModels;
 
 namespace MyGame.Data
 {
-    class DataProvider : IDataProvider
+    class ConsoloReader : IConsoleReader
     {
         public Weapon ChooseWeapon(Killer killer)
         {
@@ -23,12 +23,12 @@ namespace MyGame.Data
             }
         }
 
-        public double GetHealth()
+        public int GetHealth()
         {
             Console.WriteLine("Enter health for victim: ");
             string health = Console.ReadLine();
 
-            return Convert.ToDouble(health);
+            return Convert.ToInt32(health);
         }
 
         public Killer GetKiller()
@@ -39,7 +39,7 @@ namespace MyGame.Data
             return new Killer(characterName);
         }
 
-        public Victim GetVictim(double health)
+        public Victim GetVictim(int health)
         {
             Console.WriteLine("Victim's name: ");
             string characterName = Console.ReadLine();

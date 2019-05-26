@@ -6,8 +6,8 @@ namespace MyGame.ShieldModels
 {
     class Shield
     {
-        public double Protection { get; set; } = 0.5;
-        public virtual double Armor(double victimHealth)
+        public int Protection { get; set; } = 0;
+        public virtual int Armor(int victimHealth)
         {
             return victimHealth += Protection;
         }

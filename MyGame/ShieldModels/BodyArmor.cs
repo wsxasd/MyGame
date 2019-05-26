@@ -8,10 +8,10 @@ namespace MyGame.ShieldModels
     {
         public BodyArmor()
         {
-            Protection = 1;
+            Protection = 2;
         }
 
-        public override double Armor(double victimHealth)
+        public override int Armor(int victimHealth)
         {
             return victimHealth += Protection;
         }

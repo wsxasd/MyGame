@@ -11,7 +11,7 @@ namespace MyGame.WeaponModels
             Damage = 4;
         }
 
-        public override double DealDamage(double victimHealth)
+        public override int DealDamage(int victimHealth)
         {
             return victimHealth -= Damage;
         }

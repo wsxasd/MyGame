@@ -8,10 +8,10 @@ namespace MyGame.ShieldModels
     {
         public ChainMail()
         {
-            Protection = 0.75;
+            Protection = 1;
         }
 
-        public override double Armor(double victimHealth)
+        public override int Armor(int victimHealth)
         {
             return victimHealth += Protection;
         }

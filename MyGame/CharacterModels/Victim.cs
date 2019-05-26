@@ -7,10 +7,10 @@ namespace MyGame.CharacterModels
 {
     class Victim : Character
     {
-        public double Health { set; get; }
+        public int Health { set; get; }
         public int StepsToRun { get; set; }
         public double Shield { get; set; }
-        public Victim(string name, double health) : base(name)
+        public Victim(string name, int health) : base(name)
         {
             Health = health;
         }
@@ -19,7 +19,7 @@ namespace MyGame.CharacterModels
         {
             Console.WriteLine("Help");
         }
-        public double Armor(Shield shield, double victimHealth)
+        public int Armor(Shield shield, int victimHealth)
         {
             return shield.Armor(victimHealth);
         }
