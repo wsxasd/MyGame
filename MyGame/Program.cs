@@ -10,7 +10,7 @@ namespace MyGame
     {
         static void Main(string[] args)
         {
-            ConsoloReader consoleReader = new ConsoloReader();
+            ConsoleReader consoleReader = new ConsoleReader();
             
             int victimHealh = consoleReader.GetHealth();
 
