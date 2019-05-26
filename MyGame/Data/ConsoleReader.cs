@@ -5,7 +5,7 @@ using MyGame.WeaponModels;
 
 namespace MyGame.Data
 {
-    class ConsoloReader : IConsoleReader
+    class ConsoleReader : IConsoleReader
     {
         public Weapon ChooseWeapon(Killer killer)
         {
