@@ -7,7 +7,7 @@ namespace MyGame.Data
 {
     class ConsoleReader : IConsoleReader
     {
-        public Weapon ChooseWeapon(Killer killer)
+        public Weapon ChooseWeapon()
         {
             Console.WriteLine("Choose weapon");
             Console.WriteLine("1 - gun\n2 - blade");
@@ -46,7 +46,7 @@ namespace MyGame.Data
 
             return new Victim(characterName, health);
         }
-        public Shield ChooseShield(Victim victim)
+        public Shield ChooseShield()
         {
             Console.WriteLine("Choose shield");
             Console.WriteLine("1 - chain mail\n2 - body armor");

@@ -13,10 +13,10 @@ namespace MyGame.Data
 
         Victim GetVictim(int health);
 
-        Weapon ChooseWeapon(Killer killer);
+        Weapon ChooseWeapon();
 
         int GetHealth();
 
-        Shield ChooseShield(Victim victim);
+        Shield ChooseShield();
     }
 }

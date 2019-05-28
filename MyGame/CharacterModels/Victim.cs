@@ -10,6 +10,7 @@ namespace MyGame.CharacterModels
         public int Health { set; get; }
         public int StepsToRun { get; set; }
         public double Shield { get; set; }
+
         public Victim(string name, int health) : base(name)
         {
             Health = health;
